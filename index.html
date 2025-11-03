@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reshma Merin Thomas — Portfolio</title>
+  <meta name="description" content="Portfolio of Reshma Merin Thomas: projects, experience, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =============== NAV =============== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Reshma Merin Thomas</span>
+      </a>
+
+      <!-- Simple mobile menu (CSS only) -->
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-label="Open navigation">
+      <label for="nav-toggle" class="nav-toggle__label" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <!-- Add your resume link -->
+        <a class="btn btn--ghost" href="assets/Reshma_Merin_Thomas_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =============== HERO =============== -->
+    <section id="top" class="section hero">
+      <div class="container grid-2">
+        <div class="hero__text">
+          <p class="eyebrow">Hello, I’m Reshma 👋</p>
+          <h1>Building thoughtful experiences through design & code.</h1>
+          <p class="lede">
+            I’m a <strong>[your role: e.g., UI/UX Designer / Front-End Developer]</strong> focused on crafting accessible,
+            performant interfaces and solving real problems with clean systems.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <!-- Replace with your image -->
+          <img src="assets/portrait.jpg" alt="Portrait of Reshma Merin Thomas" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== ABOUT =============== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="card">
+          <p>
+            I’m passionate about designing usable products and shipping them. My work spans
+            wireframing, prototyping, front-end development, and usability testing.
+          </p>
+          <p>
+            Currently: <strong>[Your current role or learning focus]</strong>.<br>
+            Previously: <strong>[Previous role/company or education]</strong>.
+          </p>
+          <ul class="list-inline">
+            <li><span class="chip">Figma</span></li>
+            <li><span class="chip">React</span></li>
+            <li><span class="chip">HTML/CSS</span></li>
+            <li><span class="chip">Accessibility</span></li>
+            <li><span class="chip">User Research</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== EXPERIENCE =============== -->
+    <section id="experience" class="section section--alt">
+      <div class="container">
+        <h2>Experience</h2>
+        <ol class="timeline" aria-label="Work timeline">
+          <!-- ITEM -->
+          <li class="timeline__item">
+            <div class="timeline__heading">
+              <h3>Role @ Company</h3>
+              <span class="muted">Jan 2024 — Present · Location</span>
+            </div>
+            <p>
+              Impact-focused summary: what you built, improved, or learned. Mention metrics if possible
+              (e.g., “reduced onboarding time by 22%”).
+            </p>
+            <ul>
+              <li>Designed and shipped feature X used by Y users.</li>
+              <li>Collaborated with eng & PM to iterate on Z.</li>
+            </ul>
+          </li>
+
+          <!-- ITEM -->
+          <li class="timeline__item">
+            <div class="timeline__heading">
+              <h3>Previous Role @ Company/Institution</h3>
+              <span class="muted">Aug 2022 — Dec 2023 · Location</span>
+            </div>
+            <p>Short description of responsibilities and results.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =============== PROJECTS =============== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="grid-cards">
+          <!-- CARD 1 -->
+          <article class="card card--project">
+            <img class="card__img" src="assets/project-1.jpg" alt="Screenshot of Project One" loading="lazy" />
+            <div class="card__body">
+              <h3>Project One</h3>
+              <p>
+                Brief, outcomes-focused description of the project.
+                <em>Role:</em> Product Designer · <em>Stack:</em> Figma, React.
+              </p>
+              <div class="card__meta">
+                <a class="pill" href="https://your-live-demo.com" target="_blank" rel="noopener">Live</a>
+                <a class="pill" href="https://github.com/username/project-one" target="_blank" rel="noopener">Code</a>
+                <a class="pill" href="case-studies/project-one.html">Case Study</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="card card--project">
+            <img class="card__img" src="assets/project-2.jpg" alt="Screenshot of Project Two" loading="lazy" />
+            <div class="card__body">
+              <h3>Project Two</h3>
+              <p>
+                What problem did it solve? What did you learn? Include numbers if you have them.
+              </p>
+              <div class="card__meta">
+                <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+                <a class="pill" href="#">Case Study</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="card card--project">
+            <img class="card__img" src="assets/project-3.jpg" alt="Screenshot of Project Three" loading="lazy" />
+            <div class="card__body">
+              <h3>Project Three</h3>
+              <p>Concise description focused on outcomes and your contribution.</p>
+              <div class="card__meta">
+                <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+                <a class="pill" href="#">Case Study</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============== SKILLS =============== -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skills__group">
+            <h3>Design</h3>
+            <ul class="tags">
+              <li>Product Thinking</li><li>Wireframing</li><li>Prototyping</li><li>Design Systems</li><li>Usability Testing</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Development</h3>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Accessibility (WCAG)</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Tools</h3>
+            <ul class="tags">
+              <li>Figma</li><li>Git</li><li>Notion</li><li>Jira</li><li>Vite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== CONTACT =============== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card contact">
+          <p>
+            I’m open to freelance, full-time roles, and collaborations. The fastest way to reach me is email.
+          </p>
+          <ul class="contact__list">
+            <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+            <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.notion.so/RESHMA-MERIN-THOMAS-27bfecbfc4c880b2bbaed13f0413cb92" target="_blank" rel="noopener">Notion Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Reshma Merin Thomas. All rights reserved.</p>
+    </div>
+    <!-- No JS? This tiny inline keeps the year current; remove if you want 100% JS-free -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
