@@ -1,12 +1,12 @@
 /* -------- GLOBAL -------- */
 :root {
-  --bg: #ffffff;
-  --text: #222;
-  --accent: #2563eb;
-  --accent-light: #eff6ff;
-  --muted: #6b7280;
-  --card-bg: #f9fafb;
-  --border: #e5e7eb;
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --accent: #3b82f6;
+  --accent-light: #1e3a8a;
+  --muted: #9ca3af;
+  --card-bg: #161b22;
+  --border: #30363d;
   --font: 'Inter', sans-serif;
 }
 
@@ -37,15 +37,17 @@ h2 {
 
 p {
   margin-bottom: 1rem;
+  color: var(--muted);
 }
 
 /* -------- HEADER -------- */
 .site-header {
-  background: var(--bg);
+  background: var(--card-bg);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .container {
@@ -69,7 +71,7 @@ p {
 
 .nav a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--muted);
   transition: color 0.2s ease;
 }
 
@@ -93,7 +95,7 @@ p {
 }
 
 .btn:hover {
-  background: #1d4ed8;
+  background: #2563eb;
 }
 
 .btn--ghost {
@@ -104,6 +106,7 @@ p {
 
 .btn--ghost:hover {
   background: var(--accent-light);
+  color: #fff;
 }
 
 /* -------- HERO -------- */
@@ -135,6 +138,7 @@ p {
   border-radius: 50%;
   display: block;
   margin: auto;
+  border: 3px solid var(--accent);
 }
 
 /* -------- SECTIONS -------- */
@@ -143,14 +147,14 @@ p {
 }
 
 .section--alt {
-  background: var(--card-bg);
+  background: #0f1622;
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   margin-top: 1rem;
 }
@@ -186,6 +190,7 @@ p {
 
 .card--project {
   overflow: hidden;
+  background: var(--card-bg);
 }
 
 .card__img {
@@ -193,6 +198,7 @@ p {
   height: 180px;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .card__body {
@@ -207,7 +213,7 @@ p {
 
 .pill {
   background: var(--accent-light);
-  color: var(--accent);
+  color: #cbd5e1;
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
@@ -234,7 +240,7 @@ p {
 .tags li {
   display: inline-block;
   background: var(--accent-light);
-  color: var(--accent);
+  color: #cbd5e1;
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   margin: 0.25rem;
