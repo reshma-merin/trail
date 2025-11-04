@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reshma Merin Thomas — Portfolio</title>
-  <meta name="description" content="Portfolio of Reshma Merin Thomas: projects, experience, skills, and contact." />
+  <title>Reshma Merin Thomas — ML & Computer Vision Portfolio</title>
+  <meta name="description" content="Portfolio of Reshma Merin Thomas: machine learning, computer vision, research, projects, and contact." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -31,8 +31,9 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#publication">Publication</a>
         <a href="#contact">Contact</a>
-        <!-- Add your resume link -->
+        <!-- Resume -->
         <a class="btn btn--ghost" href="assets/Reshma_Merin_Thomas_s_CV.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
     </div>
@@ -44,13 +45,12 @@
       <div class="container grid-2">
         <div class="hero__text">
           <p class="eyebrow">Hello, I’m Reshma</p>
-          <h1>Building thoughtful experiences through design & code.</h1>
+          <h1>Machine Learning & Computer Vision — building efficient, scalable perception systems.</h1>
           <p class="lede">
-            Hi! I’m Reshma Merin Thomas, a Computer Science graduate student at California State University, Sacramento, specializing in machine learning and computer vision. I’m passionate about building intelligent, data-driven systems that bridge the gap between perception and decision-making.
-
-My work spans from 2D and 3D perception modeling using Python and PyTorch, to developing AI-powered automation tools and deep learning solutions for autonomous systems. I’ve collaborated with the Center of AI and Robotics (DRDO, India) on advanced Neural Radiance Field (NeRF) research, and currently work at CSUS Information Resources & Technology optimizing data workflows and accessibility compliance.
-
-I enjoy transforming ideas into scalable AI applications—whether that’s reconstructing 3D environments, building real-time tracking systems, or exploring how neural networks perceive the world.
+            I’m a Computer Science M.S. student at California State University, Sacramento, specializing in
+            2D/3D perception with Python and PyTorch. I enjoy turning data into intelligent behavior—object detection,
+            NeRF-based 3D scene reconstruction, and model optimization for real-world systems. Recently, I worked on NeRF
+            research with DRDO and build automation/data-quality workflows at CSUS IRT.
           </p>
           <div class="actions">
             <a class="btn" href="#projects">View Projects</a>
@@ -58,7 +58,7 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
           </div>
         </div>
         <div class="hero__media">
-          <!-- Replace with your image -->
+          <!-- Replace with your image if you have one -->
           <img src="assets/portrait.jpg" alt="Portrait of Reshma Merin Thomas" />
         </div>
       </div>
@@ -70,19 +70,14 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
         <h2>About</h2>
         <div class="card">
           <p>
-            I’m passionate about designing usable products and shipping them. My work spans
-            wireframing, prototyping, front-end development, and usability testing.
+            I’m a graduate student focused on machine learning, deep learning, and computer vision. My interests include
+            perception for autonomous systems, 3D reconstruction, and applied AI that improves accessibility and
+            decision-making. I like clean data pipelines, reproducible research, and shipping usable tools.
           </p>
-          <p>
-            Currently: <strong>[Your current role or learning focus]</strong>.<br>
-            Previously: <strong>[Previous role/company or education]</strong>.
-          </p>
-          <ul class="list-inline">
-            <li><span class="chip">Figma</span></li>
-            <li><span class="chip">React</span></li>
-            <li><span class="chip">HTML/CSS</span></li>
-            <li><span class="chip">Accessibility</span></li>
-            <li><span class="chip">User Research</span></li>
+          <h3 class="muted">Education</h3>
+          <ul>
+            <li><strong>M.S., Computer Science</strong> — California State University, Sacramento (Aug 2024 – Jul 2026 expected)</li>
+            <li><strong>B.Tech, CSE (Big Data Analytics)</strong> — SRM Institute of Science and Technology (Jul 2020 – Jun 2024)</li>
           </ul>
         </div>
       </div>
@@ -93,29 +88,37 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
       <div class="container">
         <h2>Experience</h2>
         <ol class="timeline" aria-label="Work timeline">
-          <!-- ITEM -->
+          <!-- CSUS IRT -->
           <li class="timeline__item">
             <div class="timeline__heading">
-              <h3>Role @ Company</h3>
-              <span class="muted">Jan 2024 — Present · Location</span>
+              <h3>Data Analyst · Information Resources & Technology (CSUS)</h3>
+              <span class="muted">Aug 2025 – Present · Sacramento, CA</span>
             </div>
             <p>
-              Impact-focused summary: what you built, improved, or learned. Mention metrics if possible
-              (e.g., “reduced onboarding time by 22%”).
+              Automation and data-quality improvements supporting accessibility remediation and web compliance across
+              campus platforms.
             </p>
             <ul>
-              <li>Designed and shipped feature X used by Y users.</li>
-              <li>Collaborated with eng & PM to iterate on Z.</li>
+              <li>Built Python/SQL scripts to validate and transform datasets; streamlined technical workflows.</li>
+              <li>Partnered with cross-functional teams to analyze pages and strengthen data privacy & accessibility
+                  (Canvas Ally, LMS-integrated apps).</li>
             </ul>
           </li>
 
-          <!-- ITEM -->
+          <!-- DRDO -->
           <li class="timeline__item">
             <div class="timeline__heading">
-              <h3>Previous Role @ Company/Institution</h3>
-              <span class="muted">Aug 2022 — Dec 2023 · Location</span>
+              <h3>Project Trainee · Center of AI & Robotics (DRDO), ISRD</h3>
+              <span class="muted">Jan 2024 – Mar 2024 · Bengaluru, India</span>
             </div>
-            <p>Short description of responsibilities and results.</p>
+            <p>
+              Research on NeRF-based perception for autonomous/electric vehicles—sensor fusion and spatial understanding.
+            </p>
+            <ul>
+              <li>Implemented Neural Radiance Fields for high-fidelity volumetric 3D scene reconstruction from sparse images.</li>
+              <li>Leveraged NVIDIA Instant-NGP for real-time neural rendering and accelerated ray tracing.</li>
+              <li>Achieved ~23% improvement in depth completion, 3D semantic segmentation, and free-space estimation via NeRF-based fusion.</li>
+            </ul>
           </li>
         </ol>
       </div>
@@ -127,49 +130,47 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
         <h2>Projects</h2>
 
         <div class="grid-cards">
-          <!-- CARD 1 -->
+          <!-- Football Commentary -->
           <article class="card card--project">
-            <img class="card__img" src="assets/project-1.jpg" alt="Screenshot of Project One" loading="lazy" />
+            <img class="card__img" src="assets/project-1.jpg" alt="Real-time football commentary system" loading="lazy" />
             <div class="card__body">
-              <h3>Project One</h3>
+              <h3>Real-time Football Commentary (YOLOv8 + ByteTrack)</h3>
               <p>
-                Brief, outcomes-focused description of the project.
-                <em>Role:</em> Product Designer · <em>Stack:</em> Figma, React.
+                Real-time detection/tracking with YOLOv8 &amp; ByteTrack, event recognition, and TTS to narrate matches automatically.
               </p>
               <div class="card__meta">
-                <a class="pill" href="https://your-live-demo.com" target="_blank" rel="noopener">Live</a>
-                <a class="pill" href="https://github.com/username/project-one" target="_blank" rel="noopener">Code</a>
-                <a class="pill" href="case-studies/project-one.html">Case Study</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
 
-          <!-- CARD 2 -->
+          <!-- NeRF Perception -->
           <article class="card card--project">
-            <img class="card__img" src="assets/project-2.jpg" alt="Screenshot of Project Two" loading="lazy" />
+            <img class="card__img" src="assets/project-2.jpg" alt="NeRF-based perception for autonomous vehicles" loading="lazy" />
             <div class="card__body">
-              <h3>Project Two</h3>
+              <h3>Perception for Autonomous Vehicles with NeRF</h3>
               <p>
-                What problem did it solve? What did you learn? Include numbers if you have them.
+                NeRF-based 3D reconstruction improving depth estimation, object recognition, and navigation for AV stacks.
               </p>
               <div class="card__meta">
-                <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
                 <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
-                <a class="pill" href="#">Case Study</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Paper/Notes</a>
               </div>
             </div>
           </article>
 
-          <!-- CARD 3 -->
+          <!-- P2P + Blockchain -->
           <article class="card card--project">
-            <img class="card__img" src="assets/project-3.jpg" alt="Screenshot of Project Three" loading="lazy" />
+            <img class="card__img" src="assets/project-3.jpg" alt="P2P file sharing with blockchain logging" loading="lazy" />
             <div class="card__body">
-              <h3>Project Three</h3>
-              <p>Concise description focused on outcomes and your contribution.</p>
+              <h3>P2P File Sharing with Ethereum &amp; Blockchain</h3>
+              <p>
+                Docker + Flask + Web3.py app that logs transfers on-chain for transparent, tamper-proof auditability.
+              </p>
               <div class="card__meta">
-                <a class="pill" href="#" target="_blank" rel="noopener">Live</a>
                 <a class="pill" href="#" target="_blank" rel="noopener">Code</a>
-                <a class="pill" href="#">Case Study</a>
+                <a class="pill" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
@@ -184,23 +185,40 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
         <h2>Skills</h2>
         <div class="skills">
           <div class="skills__group">
-            <h3>Design</h3>
+            <h3>Programming &amp; Development</h3>
             <ul class="tags">
-              <li>Product Thinking</li><li>Wireframing</li><li>Prototyping</li><li>Design Systems</li><li>Usability Testing</li>
+              <li>Python</li><li>C++</li><li>MATLAB</li><li>R</li><li>JavaScript</li><li>Angular</li>
+              <li>SQL (MySQL, MongoDB)</li><li>AWS</li><li>Docker</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Development</h3>
+            <h3>ML &amp; Data Science</h3>
             <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Accessibility (WCAG)</li>
+              <li>Deep Learning (CNNs, RNNs, Transformers)</li>
+              <li>Computer Vision</li><li>NLP</li><li>Data Analysis</li>
+              <li>Feature Engineering</li><li>Statistical Modeling</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Tools</h3>
+            <h3>Core Strengths</h3>
             <ul class="tags">
-              <li>Figma</li><li>Git</li><li>Notion</li><li>Jira</li><li>Vite</li>
+              <li>Analytical Thinking</li><li>Problem Solving</li>
+              <li>Research Orientation</li><li>Rapid Learning</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PUBLICATION =============== -->
+    <section id="publication" class="section">
+      <div class="container">
+        <h2>Publication</h2>
+        <div class="card">
+          <p>
+            <strong>One-Shot Learning, Video-to-Audio Commentary System for Football/Soccer</strong> —
+            Proceedings of WEBIST 2025 (Volume 1), SciTePress, pp. 335-342. DOI: 10.5220/0013692000003985.
+          </p>
         </div>
       </div>
     </section>
@@ -210,14 +228,13 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
       <div class="container">
         <h2>Contact</h2>
         <div class="card contact">
-          <p>
-            I’m open to freelance, full-time roles, and collaborations. The fastest way to reach me is email.
-          </p>
+          <p>I’m open to internships, research collaborations, and ML/CV roles. The fastest way to reach me is email.</p>
           <ul class="contact__list">
-            <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
-            <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.notion.so/RESHMA-MERIN-THOMAS-27bfecbfc4c880b2bbaed13f0413cb92" target="_blank" rel="noopener">Notion Portfolio</a></li>
+            <li><a href="mailto:merinthomas.jb@gmail.com">merinthomas.jb@gmail.com</a></li>
+            <!-- Replace the # links below with your real profiles -->
+            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Portfolio</a></li>
           </ul>
         </div>
       </div>
@@ -229,12 +246,9 @@ I enjoy transforming ideas into scalable AI applications—whether that’s reco
     <div class="container">
       <p class="muted">© <span id="year"></span> Reshma Merin Thomas. All rights reserved.</p>
     </div>
-    <!-- No JS? This tiny inline keeps the year current; remove if you want 100% JS-free -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
 </body>
 </html>
-
-
