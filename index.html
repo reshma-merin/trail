@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reshma Merin Thomas | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Reshma Merin Thomas, a computer science graduate researcher and application developer focused on applied AI, enterprise software, and intelligent systems."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --surface: rgba(255, 253, 248, 0.84);
+      --surface-strong: #fffdf9;
+      --line: rgba(17, 31, 38, 0.12);
+      --ink: #14212a;
+      --ink-soft: #44525a;
+      --muted: #6e7b83;
+      --accent: #0e7c86;
+      --accent-deep: #0c5d67;
+      --accent-soft: #d9eeeb;
+      --warm: #c8824a;
+      --shadow: 0 24px 60px rgba(20, 33, 42, 0.12);
+      --shadow-soft: 0 18px 34px rgba(20, 33, 42, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+      --font-body: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(12, 93, 103, 0.16), transparent 34%),
+        radial-gradient(circle at 85% 10%, rgba(200, 130, 74, 0.16), transparent 28%),
+        linear-gradient(180deg, #fbf7f0 0%, #f5eee3 54%, #f7f3ec 100%);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 999px;
+      pointer-events: none;
+      filter: blur(28px);
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    body::before {
+      width: 220px;
+      height: 220px;
+      top: 16%;
+      left: -70px;
+      background: rgba(14, 124, 134, 0.18);
+    }
+
+    body::after {
+      width: 280px;
+      height: 280px;
+      right: -90px;
+      bottom: 12%;
+      background: rgba(200, 130, 74, 0.18);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 18px 0;
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.72);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, rgba(14, 124, 134, 0.18), rgba(14, 124, 134, 0.05)),
+        linear-gradient(135deg, #fffdf8, #f0ece2);
+      border: 1px solid rgba(14, 124, 134, 0.18);
+      color: var(--accent-deep);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 0.96rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-role {
+      color: var(--muted);
+      font-size: 0.84rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      background: rgba(14, 124, 134, 0.1);
+      color: var(--accent-deep);
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding-bottom: 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+      gap: 24px;
+      align-items: stretch;
+      padding-top: 42px;
+    }
+
+    .hero-main,
+    .hero-side {
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-main {
+      padding: 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--accent-deep);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.5;
+    }
+
+    .hero h1 {
+      max-width: 12ch;
+      margin-bottom: 16px;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.4rem);
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .hero h1 span {
+      color: var(--accent-deep);
+    }
+
+    .hero-summary {
+      max-width: 64ch;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 28px rgba(12, 93, 103, 0.16);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+      color: #f8fffe;
+    }
+
+    .button-secondary {
+      background: rgba(255, 253, 248, 0.84);
+      border-color: rgba(12, 93, 103, 0.14);
+      color: var(--ink);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(17, 31, 38, 0.08);
+    }
+
+    .stat-value {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-deep);
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-side {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      background:
+        linear-gradient(180deg, rgba(18, 48, 59, 0.98), rgba(12, 32, 40, 0.96)),
+        linear-gradient(135deg, rgba(14, 124, 134, 0.18), transparent);
+      color: #f3f1eb;
+    }
+
+    .hero-side h2 {
+      margin-bottom: 12px;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      line-height: 1.05;
+    }
+
+    .hero-side p {
+      color: rgba(243, 241, 235, 0.8);
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .focus-item {
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .focus-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+      color: #ffffff;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .meta-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding-top: 84px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--warm);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    .grid-three {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-card,
+    .project-card,
+    .education-card,
+    .publication-card,
+    .contact-card,
+    .timeline-card,
+    .skills-card {
+      border-radius: var(--radius-lg);
+      background: rgba(255, 253, 248, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(14px);
+    }
+
+    .feature-card {
+      padding: 24px;
+    }
+
+    .feature-card span {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .feature-card h3,
+    .project-card h3,
+    .education-card h3,
+    .publication-card h3,
+    .timeline-card h3,
+    .skills-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+
+    .feature-card p,
+    .project-card p,
+    .education-card p,
+    .publication-card p,
+    .timeline-card p,
+    .skills-card p {
+      color: var(--ink-soft);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-card {
+      position: relative;
+      padding: 26px;
+      overflow: hidden;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--accent), rgba(200, 130, 74, 0.7));
+    }
+
+    .timeline-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-role {
+      display: grid;
+      gap: 5px;
+    }
+
+    .timeline-org {
+      color: var(--accent-deep);
+      font-weight: 700;
+    }
+
+    .timeline-date {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(14, 124, 134, 0.08);
+      color: var(--accent-deep);
+      font-size: 0.84rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .timeline-points,
+    .project-points,
+    .publication-meta,
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .timeline-points li,
+    .project-points li,
+    .contact-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      list-style: none;
+    }
+
+    .timeline-points li::before,
+    .project-points li::before,
+    .contact-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--warm), var(--accent));
+      transform: translateY(-50%);
+    }
+
+    .project-grid,
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card,
+    .education-card {
+      padding: 24px;
+    }
+
+    .project-chip {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(20, 33, 42, 0.06);
+      color: var(--ink-soft);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .education-card .education-date,
+    .publication-badge {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(200, 130, 74, 0.1);
+      color: #905122;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .publication-card {
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 253, 248, 0.9), rgba(247, 243, 236, 0.86)),
+        linear-gradient(135deg, rgba(14, 124, 134, 0.06), transparent);
+    }
+
+    .publication-meta {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .publication-link {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--accent-deep);
+      font-weight: 800;
+    }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 18px;
+    }
+
+    .skills-card,
+    .contact-card {
+      padding: 28px;
+    }
+
+    .skill-group {
+      display: grid;
+      gap: 10px;
+    }
+
+    .skill-group + .skill-group {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-group strong {
+      color: var(--ink);
+      font-size: 0.94rem;
+      letter-spacing: 0.02em;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(14, 124, 134, 0.08);
+      border: 1px solid rgba(14, 124, 134, 0.1);
+      color: var(--accent-deep);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(18, 48, 59, 0.98), rgba(12, 32, 40, 0.96)),
+        linear-gradient(135deg, rgba(14, 124, 134, 0.16), transparent);
+      color: #f3f1eb;
+    }
+
+    .contact-card h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p,
+    .contact-list li,
+    .contact-card a {
+      color: rgba(243, 241, 235, 0.86);
+    }
+
+    .contact-list {
+      margin-top: 18px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .contact-actions .button-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #f8f4ee;
+    }
+
+    footer {
+      padding: 32px 0 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero,
+      .section-head,
+      .skills-layout,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid,
+      .grid-three,
+      .education-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-shell {
+        width: min(100% - 20px, 100%);
+      }
+
+      .site-header {
+        padding: 12px 0;
+      }
+
+      .site-header-inner,
+      .brand {
+        align-items: flex-start;
+      }
+
+      .site-header-inner {
+        flex-direction: column;
+        border-radius: 28px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .brand-role {
+        white-space: normal;
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .timeline-card,
+      .project-card,
+      .education-card,
+      .publication-card,
+      .feature-card,
+      .skills-card,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .stat-grid,
+      .project-grid,
+      .grid-three,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-top {
+        flex-direction: column;
+      }
+
+      .timeline-date {
+        white-space: normal;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    /* A quiet, document-inspired visual system keeps the work itself in focus. */
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-strong: #ffffff;
+      --line: #dbe2ea;
+      --ink: #172033;
+      --ink-soft: #4b5568;
+      --muted: #6b7280;
+      --accent: #155e75;
+      --accent-deep: #0f3d5a;
+      --accent-soft: #e7f1f5;
+      --warm: #9a5b24;
+      --shadow: none;
+      --shadow-soft: none;
+      --radius-xl: 10px;
+      --radius-lg: 8px;
+      --radius-md: 6px;
+      --radius-sm: 4px;
+    }
+
+    body { background: var(--bg); }
+    body::before, body::after { display: none; }
+    .site-header { padding: 0; background: rgba(248, 250, 252, 0.96); border-bottom: 1px solid var(--line); }
+    .site-header-inner { min-height: 72px; padding: 12px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
+    .brand-mark { border-radius: 4px; background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
+    .nav a { border-radius: 4px; transition: background-color 160ms ease, color 160ms ease; }
+    .nav a:hover, .nav a.active { background: var(--accent-soft); transform: none; }
+    .hero { padding-top: 56px; }
+    .hero-main, .hero-side { border: 1px solid var(--line); box-shadow: none; backdrop-filter: none; }
+    .hero-main { padding: 38px; }
+    .hero h1 { max-width: 13ch; font-size: clamp(2.7rem, 5.8vw, 4.7rem); letter-spacing: -0.04em; }
+    .eyebrow { gap: 8px; margin-bottom: 16px; letter-spacing: 0.13em; }
+    .eyebrow::before { width: 24px; }
+    .button { border-radius: 5px; transition: background-color 180ms ease; }
+    .button:hover { transform: none; box-shadow: none; background: #0b3047; }
+    .button-primary { background: var(--accent-deep); }
+    .button-secondary { background: #fff; border-color: var(--line); }
+    .stat-card { border-radius: var(--radius-md); background: #f8fafc; border-color: var(--line); }
+    .hero-side, .contact-card { background: #173f5c; }
+    .focus-item { border-radius: var(--radius-sm); border-color: rgba(255,255,255,.16); }
+    .meta-pill { border-radius: 4px; }
+    .feature-card, .project-card, .education-card, .publication-card, .contact-card, .timeline-card, .skills-card { background: #fff; border-color: var(--line); box-shadow: none; backdrop-filter: none; }
+    .hero-side, .contact-card { color: #fff; }
+    .feature-card span, .timeline-date, .project-chip, .education-card .education-date, .publication-badge, .tag { border-radius: 4px; }
+    .timeline-card::before { width: 3px; background: var(--accent); }
+    .timeline-points li::before, .project-points li::before, .contact-list li::before { background: var(--accent); }
+    .project-chip { background: #eef2f6; }
+    .education-card .education-date, .publication-badge { background: #f8eee6; }
+    .publication-card { background: #fff; }
+    .tag { background: #f5f8fa; border-color: var(--line); }
+    .contact-actions .button-secondary { background: transparent; border-color: rgba(255,255,255,.4); }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    #projects .section-head, #education .section-head { grid-template-columns: 1fr; }
+    footer { border-top: 1px solid var(--line); margin-top: 64px; }
+
+    @media print {
+      body { background: #fff; }
+      .site-header { position: static; }
+      .hero, .grid-three, .project-grid, .education-grid, .skills-layout, .contact-card { grid-template-columns: 1fr; }
+      .hero-side { background: #173f5c; }
+      .feature-card, .project-card, .education-card, .publication-card, .contact-card, .timeline-card, .skills-card, .stat-card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-shell">
+      <div class="site-header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">RT</div>
+          <div class="brand-copy">
+            <p class="brand-name">Reshma Merin Thomas</p>
+            <p class="brand-role">Graduate Researcher and Application Developer</p>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#research">Research</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-shell">
+    <section class="hero reveal" id="top">
+      <div class="hero-main">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Applied AI and software engineering.</h1>
+        <p class="hero-summary">
+          I'm a graduate researcher and application developer working in computer vision, enterprise software,
+          and automation. Most of my work sits between research and production - building models, then figuring
+          out how to deploy and maintain them.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Start a Conversation</a>
+          <a class="button button-secondary" href="/Reshma_Merin_Thomas_Resume.docx">Download Resume</a>
+        </div>
+        <div class="stat-grid" aria-label="Highlights">
+          <article class="stat-card">
+            <span class="stat-value">2,500+</span>
+            <p class="stat-label">Employees supported by systems I've helped build.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">23%</span>
+            <p class="stat-label">Performance improvement on a NeRF perception project.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">3 roles</span>
+            <p class="stat-label">Running at once, across research, development, and data.</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div>
+          <h2>Current focus</h2>
+          <p>
+            A mix of ML research, legacy system modernization, and day-to-day engineering.
+          </p>
+          <div class="focus-list">
+            <article class="focus-item">
+              <strong>Computer vision</strong>
+              Vision Transformer models for wildfire detection from satellite imagery.
+            </article>
+            <article class="focus-item">
+              <strong>Automation</strong>
+              Moving Caltrans construction workflows off paper and into digital systems.
+            </article>
+            <article class="focus-item">
+              <strong>Data pipelines</strong>
+              Validation and compliance work in Python and SQL.
+            </article>
+          </div>
+        </div>
+        <div class="hero-meta">
+          <span class="meta-pill">Sacramento, California</span>
+          <span class="meta-pill">Python, SQL, .NET</span>
+          <span class="meta-pill">AI, Embedded, Web</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>Research background, engineering habits.</h2>
+        </div>
+        <p>
+          I've spent time in both academic research and production software, and I like projects that need both.
+          Training a model isn't that useful if no one can run it. I try to build things that work in practice,
+          not just in a notebook.
+        </p>
+      </div>
+      <div class="grid-three">
+        <article class="feature-card">
+          <span>AI and research</span>
+          <h3>Vision Transformers, NeRF, object detection, and tracking</h3>
+          <p>
+            Experience building computer vision pipelines for applied research problems.
+          </p>
+        </article>
+        <article class="feature-card">
+          <span>Software delivery</span>
+          <h3>.NET, Docker, CI/CD, and internal automation tools</h3>
+          <p>
+            Building and supporting applications, services, and workflows that improve operational speed and accuracy.
+          </p>
+        </article>
+        <article class="feature-card">
+          <span>Everything in between</span>
+          <h3>Data pipelines, accessibility, and embedded sensor fusion</h3>
+          <p>
+            Comfortable working across the pieces a project needs, from SQL pipelines and compliance work to
+            IMU sensor fusion and embedded visualization.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Experience</p>
+          <h2>What I've been working on.</h2>
+        </div>
+        <p>
+          Three roles right now, all with the same throughline: build something technically solid, then make
+          sure it actually gets used.
+        </p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div class="timeline-role">
+              <h3>Graduate Researcher</h3>
+              <p class="timeline-org">Department of Engineering and Computer Science, California State University, Sacramento</p>
+            </div>
+            <p class="timeline-date">August 2025 - Present</p>
+          </div>
+          <p>
+            Conducting research on early wildfire detection using satellite imagery and transformer-based
+            deep learning approaches.
+          </p>
+          <ul class="timeline-points">
+            <li>Built a Vision Transformer model from scratch using VIIRS satellite imagery captured by the Suomi satellite.</li>
+            <li>Pretrained and fine-tuned the architecture on wildfire datasets to improve detection accuracy for early warning scenarios.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div class="timeline-role">
+              <h3>Application Developer</h3>
+              <p class="timeline-org">Division of Construction, Caltrans</p>
+            </div>
+            <p class="timeline-date">December 2025 - Present</p>
+          </div>
+          <p>
+            Contributing to the modernization of statewide construction workflows through application
+            development, automation, and deployment support.
+          </p>
+          <ul class="timeline-points">
+            <li>Support web-based systems used by 2,500+ employees for contract administration, testing, debugging, and payment processing.</li>
+            <li>Design automation solutions, deploy .NET applications with Docker, and maintain CI/CD pipelines for repeatable delivery.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div class="timeline-role">
+              <h3>Data Analyst</h3>
+              <p class="timeline-org">Information Resources and Technology, California State University, Sacramento</p>
+            </div>
+            <p class="timeline-date">August 2025 - Present</p>
+          </div>
+          <p>
+            Improving technical workflows through data validation, process documentation, accessibility review,
+            and cross-functional coordination.
+          </p>
+          <ul class="timeline-points">
+            <li>Developed automation scripts using Python and SQL best practices to improve data quality and efficiency.</li>
+            <li>Worked with teams to strengthen accessibility and privacy compliance using Canvas Ally and LMS-integrated tools.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-card">
+          <div class="timeline-top">
+            <div class="timeline-role">
+              <h3>Project Trainee</h3>
+              <p class="timeline-org">Center of AI and Robotics, DRDO</p>
+            </div>
+            <p class="timeline-date">January 2024 - March 2024</p>
+          </div>
+          <p>
+            Worked on perception systems for autonomous and electric vehicles with a focus on high-fidelity
+            3D scene reconstruction.
+          </p>
+          <ul class="timeline-points">
+            <li>Researched and implemented Neural Radiance Fields for volumetric 3D reconstruction from sparse image datasets.</li>
+            <li>Used NVIDIA Instant-NGP to accelerate neural rendering and delivered a 23% improvement in downstream perception tasks.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Projects</p>
+          <h2>A few projects worth mentioning.</h2>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-chip">Computer Vision</p>
+          <h3>Football Commentary System</h3>
+          <p>
+            A real-time commentary pipeline combining player and event recognition with automatic narration.
+          </p>
+          <ul class="project-points">
+            <li>Built with YOLOv8 and ByteTrack for detection, tracking, and event analysis.</li>
+            <li>Integrated text-to-speech output for automated, game-aware commentary delivery.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <p class="project-chip">Embedded Systems</p>
+          <h3>AHRS-Based Artificial Horizon and Heading Indicator</h3>
+          <p>
+            A low-cost embedded navigation visualization system for stable orientation tracking.
+          </p>
+          <ul class="project-points">
+            <li>Designed around STM32L432KC and MPU9250 IMU hardware.</li>
+            <li>Implemented quaternion-based sensor fusion to drive a real-time horizon and heading display.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <p class="project-chip">Autonomous Systems</p>
+          <h3>NeRF-Based Perception for Autonomous Vehicles</h3>
+          <p>
+            A perception pipeline focused on reconstructing 3D scenes for navigation and scene understanding.
+          </p>
+          <ul class="project-points">
+            <li>Used Neural Radiance Fields to improve depth estimation and object recognition performance.</li>
+            <li>Applied the system to autonomous driving contexts where high-fidelity spatial modeling matters.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <p class="project-chip">Enterprise Software</p>
+          <h3>Quipt Mapping Engine</h3>
+          <p>
+            A backend project for turning product specifications into marketplace-ready inventory feeds. It parses
+            product data, maps attributes, and generates XSLT files for downstream transformations.
+          </p>
+          <ul class="project-points">
+            <li>Supports JSON, XML, text, and XSLT inputs across laptop, desktop, and smartphone categories.</li>
+            <li>Matches attributes using normalization, aliases, token scoring, and Quipt attribute-code resolution.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="reveal">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Research and Publication</p>
+          <h2>Published research.</h2>
+        </div>
+        <p>
+          One paper so far, on generating sports commentary from video using one-shot learning. Presented at
+          WEBIST 2025.
+        </p>
+      </div>
+      <article class="publication-card">
+        <p class="publication-badge">WEBIST 2025</p>
+        <h3>One-Shot Learning, Video-to-Audio Commentary System for Football and/or Soccer Games</h3>
+        <p>
+          Co-authored publication presented at the 21st International Conference on Web Information Systems
+          and Technologies, covering a system that transforms football video into spoken commentary through
+          event-aware learning and generation techniques.
+        </p>
+        <div class="publication-meta">
+          <p>Authors: K. Mahajan, R. Thomas, S. Patel, A. Thupally, and B. Molokwu</p>
+          <p>Proceedings of WEBIST, Volume 1, pages 335-342</p>
+          <p>DOI: 10.5220/0013692000003985</p>
+        </div>
+        <a class="publication-link" href="https://doi.org/10.5220/0013692000003985">View publication</a>
+      </article>
+    </section>
+
+    <section id="education" class="reveal">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Education and skills</p>
+          <h2>Education and skills.</h2>
+        </div>
+      </div>
+
+      <div class="skills-layout">
+        <div class="education-grid">
+          <article class="education-card">
+            <p class="education-date">August 2024 - July 2026</p>
+            <h3>M.S. in Computer Science</h3>
+            <p>California State University, Sacramento</p>
+            <p>GPA: 3.1 / 4.0</p>
+          </article>
+          <article class="education-card">
+            <p class="education-date">July 2020 - June 2024</p>
+            <h3>B.Tech in Computer Science and Engineering</h3>
+            <p>Specialization in Big Data Analytics</p>
+            <p>SRM Institute of Science and Technology | GPA: 3.5 / 4.0</p>
+          </article>
+          <article class="education-card">
+            <p class="education-date">Core Strengths</p>
+            <h3>Applied problem solving</h3>
+            <p>
+              Strong across research implementation, application development, data workflows, and technical
+              collaboration in interdisciplinary settings.
+            </p>
+          </article>
+        </div>
+
+        <aside class="skills-card">
+          <h3>Skill set</h3>
+          <p>Broad technical coverage with depth in AI, software delivery, and embedded systems.</p>
+
+          <div class="skill-group">
+            <strong>Languages</strong>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">C</span>
+              <span class="tag">C++</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <strong>Frameworks and Tools</strong>
+            <div class="tag-row">
+              <span class="tag">.NET</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Git</span>
+              <span class="tag">YOLOv8</span>
+              <span class="tag">ByteTrack</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <strong>AI and Machine Learning</strong>
+            <div class="tag-row">
+              <span class="tag">Vision Transformers</span>
+              <span class="tag">NeRF</span>
+              <span class="tag">Instant-NGP</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Object Tracking</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <strong>Embedded and Data Work</strong>
+            <div class="tag-row">
+              <span class="tag">STM32L432KC</span>
+              <span class="tag">MPU9250 IMU</span>
+              <span class="tag">Sensor Fusion</span>
+              <span class="tag">WCAG Compliance</span>
+              <span class="tag">Canvas Ally</span>
+              <span class="tag">LMS Integrations</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="contact-card">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Get in touch.</h2>
+          <p>
+            Reach out if you're working on something in AI, software, or research and want to talk.
+          </p>
+          <ul class="contact-list">
+            <li><a href="mailto:merinthomas.jb@gmail.com">merinthomas.jb@gmail.com</a></li>
+            <li><a href="tel:+19167097410">+1 (916) 709-7410</a></li>
+            <li>Sacramento, California</li>
+          </ul>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:merinthomas.jb@gmail.com">Email Reshma</a>
+          <a class="button button-secondary" href="/Reshma_Merin_Thomas_Resume.docx">Download Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-shell">
+    <p>Reshma Merin Thomas | Sacramento, California</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav a");
+    const sections = document.querySelectorAll("section[id]");
+
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${entry.target.id}`;
+            link.classList.toggle("active", isActive);
+          });
+        });
+      },
+      {
+        rootMargin: "-40% 0px -45% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => navObserver.observe(section));
+  </script>
+</body>
+</html>
