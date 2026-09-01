@@ -414,7 +414,6 @@
     .project-card,
     .education-card,
     .publication-card,
-    .contact-card,
     .timeline-card,
     .skills-card {
       border-radius: var(--radius-lg);
@@ -510,16 +509,14 @@
 
     .timeline-points,
     .project-points,
-    .publication-meta,
-    .contact-list {
+    .publication-meta {
       display: grid;
       gap: 10px;
       margin-top: 16px;
     }
 
     .timeline-points li,
-    .project-points li,
-    .contact-list li {
+    .project-points li {
       position: relative;
       padding-left: 18px;
       color: var(--ink-soft);
@@ -527,8 +524,7 @@
     }
 
     .timeline-points li::before,
-    .project-points li::before,
-    .contact-list li::before {
+    .project-points li::before {
       content: "";
       position: absolute;
       left: 0;
@@ -620,8 +616,7 @@
       gap: 18px;
     }
 
-    .skills-card,
-    .contact-card {
+    .skills-card {
       padding: 28px;
     }
 
@@ -658,48 +653,6 @@
       font-weight: 700;
     }
 
-    .contact-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 20px;
-      align-items: center;
-      background:
-        linear-gradient(135deg, rgba(18, 48, 59, 0.98), rgba(12, 32, 40, 0.96)),
-        linear-gradient(135deg, rgba(14, 124, 134, 0.16), transparent);
-      color: #f3f1eb;
-    }
-
-    .contact-card h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
-    }
-
-    .contact-card p,
-    .contact-list li,
-    .contact-card a {
-      color: rgba(243, 241, 235, 0.86);
-    }
-
-    .contact-list {
-      margin-top: 18px;
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 12px;
-    }
-
-    .contact-actions .button-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.12);
-      color: #f8f4ee;
-    }
-
     footer {
       padding: 32px 0 8px;
       color: var(--muted);
@@ -720,8 +673,7 @@
     @media (max-width: 1080px) {
       .hero,
       .section-head,
-      .skills-layout,
-      .contact-card {
+      .skills-layout {
         grid-template-columns: 1fr;
       }
 
@@ -731,9 +683,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .contact-actions {
-        justify-content: flex-start;
-      }
     }
 
     @media (max-width: 760px) {
@@ -774,8 +723,7 @@
       .education-card,
       .publication-card,
       .feature-card,
-      .skills-card,
-      .contact-card {
+      .skills-card {
         padding: 22px;
       }
 
@@ -799,8 +747,7 @@
         white-space: normal;
       }
 
-      .hero-actions,
-      .contact-actions {
+      .hero-actions {
         flex-direction: column;
         align-items: stretch;
       }
@@ -849,19 +796,18 @@
     .button-primary { background: var(--accent-deep); }
     .button-secondary { background: #fff; border-color: var(--line); }
     .stat-card { border-radius: var(--radius-md); background: #f8fafc; border-color: var(--line); }
-    .hero-side, .contact-card { background: #173f5c; }
+    .hero-side { background: #173f5c; }
     .focus-item { border-radius: var(--radius-sm); border-color: rgba(255,255,255,.16); }
     .meta-pill { border-radius: 4px; }
-    .feature-card, .project-card, .education-card, .publication-card, .contact-card, .timeline-card, .skills-card { background: #fff; border-color: var(--line); box-shadow: none; backdrop-filter: none; }
-    .hero-side, .contact-card { color: #fff; }
+    .feature-card, .project-card, .education-card, .publication-card, .timeline-card, .skills-card { background: #fff; border-color: var(--line); box-shadow: none; backdrop-filter: none; }
+    .hero-side { color: #fff; }
     .feature-card span, .timeline-date, .project-chip, .education-card .education-date, .publication-badge, .tag { border-radius: 4px; }
     .timeline-card::before { width: 3px; background: var(--accent); }
-    .timeline-points li::before, .project-points li::before, .contact-list li::before { background: var(--accent); }
+    .timeline-points li::before, .project-points li::before { background: var(--accent); }
     .project-chip { background: #eef2f6; }
     .education-card .education-date, .publication-badge { background: #f8eee6; }
     .publication-card { background: #fff; }
     .tag { background: #f5f8fa; border-color: var(--line); }
-    .contact-actions .button-secondary { background: transparent; border-color: rgba(255,255,255,.4); }
     .reveal { opacity: 1; transform: none; transition: none; }
     #projects .section-head, #education .section-head { grid-template-columns: 1fr; }
     footer { border-top: 1px solid var(--line); margin-top: 64px; }
@@ -869,9 +815,9 @@
     @media print {
       body { background: #fff; }
       .site-header { position: static; }
-      .hero, .grid-three, .project-grid, .education-grid, .skills-layout, .contact-card { grid-template-columns: 1fr; }
+      .hero, .grid-three, .project-grid, .education-grid, .skills-layout { grid-template-columns: 1fr; }
       .hero-side { background: #173f5c; }
-      .feature-card, .project-card, .education-card, .publication-card, .contact-card, .timeline-card, .skills-card, .stat-card { break-inside: avoid; }
+      .feature-card, .project-card, .education-card, .publication-card, .timeline-card, .skills-card, .stat-card { break-inside: avoid; }
     }
   </style>
 </head>
@@ -892,7 +838,6 @@
           <a href="#projects">Projects</a>
           <a href="#research">Research</a>
           <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
         </nav>
       </div>
     </div>
@@ -909,7 +854,6 @@
           out how to deploy and maintain them.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Start a Conversation</a>
           <a class="button button-primary" href="#projects">View Projects</a>
           <a class="button button-secondary" href="/Reshma_Merin_Thomas_Resume.docx">Download Resume</a>
         </div>
@@ -1268,26 +1212,6 @@
       </div>
     </section>
 
-    <section id="contact" class="reveal">
-      <div class="contact-card">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Get in touch.</h2>
-          <p>
-            Reach out if you're working on something in AI, software, or research and want to talk.
-          </p>
-          <ul class="contact-list">
-            <li><a href="mailto:merinthomas.jb@gmail.com">merinthomas.jb@gmail.com</a></li>
-            <li><a href="tel:+19167097410">+1 (916) 709-7410</a></li>
-            <li>Sacramento, California</li>
-          </ul>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:merinthomas.jb@gmail.com">Email Reshma</a>
-          <a class="button button-secondary" href="/Reshma_Merin_Thomas_Resume.docx">Download Resume</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-shell">
