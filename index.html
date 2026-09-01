@@ -552,6 +552,15 @@
       padding: 24px;
     }
 
+    .project-preview {
+      display: block;
+      width: calc(100% + 48px);
+      height: 168px;
+      margin: -24px -24px 20px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+    }
+
     .project-chip {
       display: inline-flex;
       margin-bottom: 14px;
@@ -592,6 +601,13 @@
     }
 
     .publication-link {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--accent-deep);
+      font-weight: 800;
+    }
+
+    .project-link {
       display: inline-flex;
       margin-top: 18px;
       color: var(--accent-deep);
@@ -763,6 +779,11 @@
         padding: 22px;
       }
 
+      .project-preview {
+        width: calc(100% + 44px);
+        margin: -22px -22px 20px;
+      }
+
       .stat-grid,
       .project-grid,
       .grid-three,
@@ -889,6 +910,7 @@
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#contact">Start a Conversation</a>
+          <a class="button button-primary" href="#projects">View Projects</a>
           <a class="button button-secondary" href="/Reshma_Merin_Thomas_Resume.docx">Download Resume</a>
         </div>
         <div class="stat-grid" aria-label="Highlights">
@@ -1112,6 +1134,24 @@
             <li>Supports JSON, XML, text, and XSLT inputs across laptop, desktop, and smartphone categories.</li>
             <li>Matches attributes using normalization, aliases, token scoring, and Quipt attribute-code resolution.</li>
           </ul>
+        </article>
+        <article class="project-card">
+          <img
+            class="project-preview"
+            src="/cnc-machinemind-demo.gif"
+            alt="MachineMind CNC predictive maintenance dashboard"
+          />
+          <p class="project-chip">Predictive Maintenance</p>
+          <h3>MachineMind: CNC Predictive Maintenance</h3>
+          <p>
+            An end-to-end system for monitoring CNC milling machines, validating operator inputs, and predicting
+            maintenance issues before a job fails.
+          </p>
+          <ul class="project-points">
+            <li>Combines LSTM, autoencoder, random forest, and gradient-boosting models for failure, anomaly, parameter, and remaining-life predictions.</li>
+            <li>Built with PyTorch, scikit-learn, MLflow, FastAPI, Streamlit, Tableau, and Docker.</li>
+          </ul>
+          <a class="project-link" href="https://github.com/reshma-merin/CNC-machine" target="_blank" rel="noreferrer">View source on GitHub</a>
         </article>
       </div>
     </section>
